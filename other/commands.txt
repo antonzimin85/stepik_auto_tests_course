@@ -1,0 +1,69 @@
+# IMPORT
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+# NEW WINDOW
+
+    browser = webdriver.Chrome()
+
+# OPEN LINK
+
+    browser.get(link)
+
+# FIND ELEMENT/ELEMENTS
+
+    browser.find_element
+    browser.find_elements
+
+    # CLICK
+    .click()
+
+# GET TEXT BETWEEN TAGS
+    x = browser.find_element(By.ID, 'input_value')
+    x = x.text
+
+# PUT THE TEXT IN THE FIELD OR A FILE
+
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    file_path = os.path.join(current_dir, '2_8.txt')
+    file = browser.find_element(By.ID, 'file')
+    file.send_keys(file_path)
+    .send_keys()
+
+# FIND AND SELECT DROPDOWN
+
+    select = Select(browser.find_element(By.TAG_NAME, "select"))
+    select.select_by_value(str(summ))
+
+# SCROLL TO THE ELEMENT
+
+    browser.execute_script("return arguments[0].scrollIntoView(true);", radio)
+
+#ALERTS/CONFIRM/PROMPT
+
+    alert = browser.switch_to.alert
+    alert.accept()
+
+    confirm = browser.switch_to.alert
+    confirm.accept()
+
+    prompt = browser.switch_to.alert
+    prompt.send_keys("My answer")
+    prompt.accept()
+
+#SWITH TO ANOTHER TAB
+
+    browser.switch_to.window(window_name)
+find name of the tab
+    new_window = browser.window_handles[1]
+    first_window = browser.window_handles[0]
+
+# TIME FOR SEARCHING ELEMENT
+    browser.implicitly_wait(5)
+
+# WAIT ELEMENT
+
+    WebDriverWait(browser, 15).until(EC.text_to_be_present_in_element((By.ID,'price'),'100'))
+    btn.click()
